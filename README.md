@@ -6,3 +6,9 @@ Created by student - Kupreichyk Mikhail. This is the second part of fullstack ap
 #npm start - starts the application.
 
 Important - to for the application to work correctly first run this api(https://github.com/Vu1ture1/LIBRARY_PROJECT_BACKEND.git).
+
+Data to test this app:
+
+Admin:
+email: misha@mail.ru
+password: 12345678
