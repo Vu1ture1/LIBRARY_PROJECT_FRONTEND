@@ -124,7 +124,7 @@ const ChangePage = () => {
       const fetchGenresAndAuthors = async () => {
           try {
               const response = await axios.get(AUTHORS_URL);
-              const authors = response.data.map(item => new Author(
+              const authors = response.data.value.map(item => new Author(
                   item.id,
                   item.name,
                   item.surname,

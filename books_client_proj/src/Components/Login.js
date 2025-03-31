@@ -40,10 +40,10 @@ const Login = () => {
                 JSON.stringify({ email, password: pwd }),
                 {
                     headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true 
+                    withCredentials: true
                 }
             );
-            
+
             const accessToken = response?.data?.accessToken;
             
             console.log({ accessToken });
@@ -59,6 +59,9 @@ const Login = () => {
             if (err.response?.status === 401) {
                 setErrMsg(err.response.data.error);
             }
+            else if (err.response?.status === 408) {
+                setErrMsg('Сервер не slrnlsir.');
+            } 
             else if (!err?.response) {
                 setErrMsg('Сервер не отвечает.');
             } 
