@@ -291,6 +291,7 @@ const GetAllBooks = () => {
                                         <span>Автор: {book.book_author.name} {book.book_author.surname}</span><br/><br/>
                                         <span>Жанр: {book.genre}</span><br/><br/>
                                         <span>Описание: {truncateString(book.description)}</span><br/><br/>
+                                        
                                         <span>Статус книги: {bookStatus(book.userThatGetBook, book.returnBy)}</span><br/>
                                         </Card.Text>
                                         <Button style={{marginRight: "10px"}} variant="secondary" size="sm" onClick={() => handleAuthorChange(book.book_author.id, `${book.book_author.name} ${book.book_author.surname}`)}>Фильтр по автору</Button>

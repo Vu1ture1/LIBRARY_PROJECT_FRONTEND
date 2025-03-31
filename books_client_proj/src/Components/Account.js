@@ -72,8 +72,9 @@ const UserProfile = () => {
 
                 setData(books);
             } catch (err) {
-                console.error(err);
-                navigate('/login');
+                if (err.response?.status === 404) {
+                    setData([]);
+                }
             }
         };
 
